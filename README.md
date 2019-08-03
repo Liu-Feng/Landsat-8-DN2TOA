@@ -6,5 +6,6 @@ numpy
 time 
 math
 gdal
+redis
 
 In this  demo, the code about anysising mtl.txt isn't my effort.
