@@ -2,7 +2,7 @@
 '''
 Copyright: LiuFeng
 Time: 2019.7.29
-Email: liu_feng1121@126.com
+Email: liu.feng.9610@gmail.com
 '''
 
 import gdal
@@ -20,32 +20,6 @@ import inspect
 
 
 
-'''
-some cmd lines used operate docker in cluster
-
-install docker in different nodes
-# yum install docker
-# vi /etc/docker/daemon.json
-
-
-# {
-#     "registry-mirrors":
-#     [
-#         "http://192.168.101.12:5000"
-#     ],
-#     "insecure-registries": ["192.168.101.12:5000"]
-# }
-
-run the code in 
-# for i in $(seq -w 5)
-# do
-
-# docker  run -d  -v  /poyanghu:/poyanghu --name run$i  192.168.101.12:5000/gdal_redis:full   python  /home/get_toa.py --key_name FAIL_SETS --fail_key SECOND_FAIL
-
-# done
-
-#  docker  run -d  -v  /poyanghu:/poyanghu --name run01  192.168.101.12:5000/gdal_redis:full   python  /home/get_toa.py
-'''
 parser = argparse.ArgumentParser()
 parser.add_argument('--host_name', type=str, default="", help='host name used in redis')
 parser.add_argument('--port', type=str, default="6379", help='port used in redis')
